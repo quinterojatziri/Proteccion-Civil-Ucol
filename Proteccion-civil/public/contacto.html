@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto | Protección Civil UCOL</title>
+  <meta name="description" content="Datos de contacto y formulario para escribir a la Unidad de Protección Civil de la Universidad de Colima.">
+  <meta name="theme-color" content="#144a29">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/theme.js"></script>
+</head>
+<body>
+  <div id="site-header"></div>
+
+    <section class="page-title">
+      <div class="container">
+        <h1>Contacto</h1>
+        <p>Escríbenos o llámanos: estamos para ayudarte.</p>
+      </div>
+    </section>
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-2" style="align-items:start">
+          <div class="card">
+            <h2>Información de contacto</h2>
+            <ul class="meta" style="font-size:1rem">
+              <li><span>Correo</span><span><a href="mailto:proteccioncivil@ucol.mx">proteccioncivil@ucol.mx</a></span></li>
+              <li><span>Teléfono</span><span><a href="tel:+523123161000">312 316 1000, ext. 30011</a></span></li>
+              <li><span>Emergencias 24 h</span><span><a href="tel:+523123161017">312 316 1017</a></span></li>
+              <li><span>Dirección</span><span>Campus Universitario, Colima, Col.</span></li>
+              <li><span>Horario de atención</span><span>Lunes a viernes, 8:00 a 18:00</span></li>
+            </ul>
+            <p class="muted" style="font-size:.9rem;margin:0">Este formulario no es para emergencias. Si hay riesgo para la vida, llama al 911 o al 312 316 1017.</p>
+          </div>
+          <form id="form" class="form-card form" novalidate>
+            <h2>Envíanos un mensaje</h2>
+            <div class="field"><label for="nombre">Nombre <span class="req">*</span></label><input type="text" id="nombre" autocomplete="name" required></div>
+            <div class="form-row">
+              <div class="field"><label for="email">Correo electrónico <span class="req">*</span></label><input type="email" id="email" autocomplete="email" required></div>
+              <div class="field"><label for="telefono">Teléfono</label><input type="tel" id="telefono" autocomplete="tel"></div>
+            </div>
+            <div class="form-row">
+              <div class="field"><label for="tipo">Tipo de mensaje</label>
+                <select id="tipo"><option value="consulta">Consulta</option><option value="sugerencia">Sugerencia</option><option value="queja">Queja</option><option value="felicitacion">Felicitación</option><option value="otro">Otro</option></select></div>
+              <div class="field"><label for="asunto">Asunto <span class="req">*</span></label><input type="text" id="asunto" required></div>
+            </div>
+            <div class="field"><label for="mensaje">Mensaje <span class="req">*</span></label><textarea id="mensaje" rows="5" required></textarea></div>
+            <div class="form-actions"><button type="submit" class="btn btn-primary" id="enviar">Enviar mensaje</button></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/demo.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/boot.js"></script>
+  <script src="js/pages/contacto.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reporte de emergencia | Protección Civil UCOL</title>
+  <meta name="description" content="Reporta una emergencia dentro de las instalaciones de la Universidad de Colima.">
+  <meta name="theme-color" content="#144a29">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/theme.js"></script>
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <div class="emergency-banner">
+    <div class="container">
+      <strong>Línea de emergencias 24 h: <a href="tel:+523123161017">312 316 1017</a></strong>
+      <span>Peligro inmediato para la vida: llama al <a href="tel:911">911</a></span>
+    </div>
+  </div>
+  <main>
+    <section class="section">
+      <div class="container narrow">
+        <h1>Reporte de emergencia</h1>
+        <p class="muted">Usa este formulario para reportar una situación dentro de las instalaciones universitarias. Si alguien está en peligro inmediato, <strong>no uses el formulario: llama</strong>. Un reporte por internet puede tardar más en atenderse que una llamada.</p>
+        <div id="aviso-demo" class="notice notice-danger hidden"><strong>Este sitio está en modo demostración.</strong> El reporte no llegará a ningún equipo de respuesta. En una emergencia real llama al 312 316 1017 o al 911.</div>
+        <form id="form" class="form-card form" novalidate>
+          <div class="form-row">
+            <div class="field"><label for="nombre">Nombre completo <span class="req">*</span></label><input type="text" id="nombre" autocomplete="name" required></div>
+            <div class="field"><label for="telefono">Teléfono de contacto <span class="req">*</span></label><input type="tel" id="telefono" autocomplete="tel" required></div>
+          </div>
+          <div class="field"><label for="email">Correo electrónico</label><input type="email" id="email" autocomplete="email"></div>
+          <div class="form-row">
+            <div class="field"><label for="tipo">Tipo de emergencia <span class="req">*</span></label>
+              <select id="tipo" required><option value="">Selecciona una opción</option><option value="medica">Médica</option><option value="incendio">Incendio</option><option value="evacuacion">Evacuación</option><option value="accidente">Accidente</option><option value="estructural">Daño estructural</option><option value="quimica">Derrame químico</option><option value="otra">Otra</option></select></div>
+            <div class="field"><label for="urgencia">Nivel de urgencia <span class="req">*</span></label>
+              <select id="urgencia" required><option value="baja">Baja</option><option value="media" selected>Media</option><option value="alta">Alta</option><option value="critica">Crítica</option></select></div>
+          </div>
+          <div class="form-row form-row-3">
+            <div class="field"><label for="edificio">Edificio</label><input type="text" id="edificio" placeholder="Ej. Edificio A"></div>
+            <div class="field"><label for="piso">Piso</label><input type="text" id="piso" placeholder="Ej. Segundo piso"></div>
+            <div class="field"><label for="afectados">Personas afectadas</label><input type="number" id="afectados" value="1" min="1"></div>
+          </div>
+          <div class="field"><label for="ubicacion">Ubicación detallada <span class="req">*</span></label><input type="text" id="ubicacion" required><p class="hint">Indica con precisión dónde se encuentra la emergencia y alguna referencia cercana.</p></div>
+          <div class="field"><label for="descripcion">Descripción <span class="req">*</span></label><textarea id="descripcion" rows="5" required></textarea><p class="hint">Qué está ocurriendo y si hay personas lesionadas.</p></div>
+          <div class="form-actions"><button type="submit" class="btn btn-accent" id="enviar">Enviar reporte</button></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/demo.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/boot.js"></script>
+  <script src="js/pages/emergencias.js"></script>
+</body>
+</html>

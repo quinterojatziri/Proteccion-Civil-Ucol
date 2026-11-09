@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Panel de administración | Protección Civil UCOL</title>
+  <meta name="description" content="Panel de administración de Protección Civil UCOL.">
+  <meta name="theme-color" content="#144a29">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/theme.js"></script>
+</head>
+<body>
+  <div id="site-header"></div>
+
+    <section class="page-title"><div class="container"><h1>Panel de administración</h1><p>Usuarios, solicitudes de ingreso y mensajes recibidos.</p></div></section>
+  <main>
+    <div class="container panel">
+      <nav class="panel-nav" aria-label="Secciones del panel">
+        <button type="button" data-tab="resumen" aria-selected="true">Resumen</button>
+        <button type="button" data-tab="usuarios" aria-selected="false">Usuarios</button>
+        <button type="button" data-tab="solicitudes" aria-selected="false">Solicitudes de brigada</button>
+        <button type="button" data-tab="mensajes" aria-selected="false">Mensajes</button>
+      </nav>
+      <div>
+        <section data-section="resumen">
+          <div class="panel-head"><h2>Resumen</h2></div>
+          <div class="grid grid-4" id="tiles"></div>
+          <h3 style="margin-top:2rem">Actividad reciente</h3>
+          <div class="card"><ul class="list-plain" id="actividad"></ul></div>
+        </section>
+
+        <section data-section="usuarios" class="hidden">
+          <div class="panel-head"><h2>Usuarios</h2><button type="button" class="btn btn-primary btn-sm" id="nuevo-usuario">Nuevo usuario</button></div>
+          <div class="table-wrap"><table>
+            <thead><tr><th>Nombre</th><th>Correo</th><th>Rol</th><th>Estado</th><th>Acciones</th></tr></thead>
+            <tbody id="tabla-usuarios"></tbody>
+          </table></div>
+        </section>
+
+        <section data-section="solicitudes" class="hidden">
+          <div class="panel-head"><h2>Solicitudes de ingreso a brigadas</h2></div>
+          <div id="lista-solicitudes" class="stack"></div>
+        </section>
+
+        <section data-section="mensajes" class="hidden">
+          <div class="panel-head"><h2>Mensajes de contacto</h2></div>
+          <div id="lista-mensajes" class="stack"></div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/demo.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/boot.js"></script>
+  <script src="js/panel.js"></script>
+  <script src="js/pages/dash-admi.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Directorio de brigadistas | Protección Civil UCOL</title>
+  <meta name="description" content="Consulta qué brigadistas están disponibles, por brigada y facultad.">
+  <meta name="theme-color" content="#144a29">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+  <script src="js/theme.js"></script>
+</head>
+<body>
+  <div id="site-header"></div>
+
+    <section class="page-title">
+      <div class="container">
+        <h1>Directorio de brigadistas</h1>
+        <p>Consulta la disponibilidad de los brigadistas por brigada, facultad o nombre.</p>
+      </div>
+    </section>
+  <main>
+    <section class="section">
+      <div class="container">
+        <form id="filtros" class="form-card form" style="margin-bottom:1.5rem">
+          <div class="form-row form-row-4">
+            <div class="field"><label for="f-nombre">Nombre</label><input type="search" id="f-nombre"></div>
+            <div class="field"><label for="f-brigada">Brigada</label><select id="f-brigada"><option value="">Todas</option></select></div>
+            <div class="field"><label for="f-estado">Disponibilidad</label>
+              <select id="f-estado"><option value="">Todas</option><option value="disponible">Disponible</option><option value="en_servicio">En servicio</option><option value="no_disponible">No disponible</option><option value="fuera_de_servicio">Fuera de servicio</option></select></div>
+            <div class="field"><label for="f-facultad">Facultad</label><input type="search" id="f-facultad" placeholder="Ej. Medicina"></div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Buscar</button>
+            <button type="button" class="btn btn-outline" id="limpiar">Limpiar</button>
+          </div>
+        </form>
+
+        <h2 style="font-size:1.2rem">Mapa de brigadistas</h2>
+        <p id="nota-mapa" class="muted" style="font-size:.92rem"></p>
+        <div id="mapa-wrap" style="margin-bottom:2rem">
+          <div id="map" role="region" aria-label="Mapa de ubicación de brigadistas"></div>
+          <div class="legend">
+            <span><i style="background:#2e8b57"></i>Disponible</span><span><i style="background:#e0a100"></i>En servicio</span>
+            <span class="staff-only hidden"><i style="background:#c0392b"></i>No disponible</span><span class="staff-only hidden"><i style="background:#7f8c8d"></i>Fuera de servicio</span>
+          </div>
+        </div>
+
+        <h2 style="font-size:1.2rem">Resultados <span id="total" class="muted"></span></h2>
+        <div id="lista" class="grid grid-3" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/demo.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/boot.js"></script>
+  <script src="vendor/leaflet/leaflet.js"></script>
+  <script src="js/pages/busqueda.js"></script>
+</body>
+</html>

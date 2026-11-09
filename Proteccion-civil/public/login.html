@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Iniciar sesión | Protección Civil UCOL</title>
+  <meta name="description" content="Acceso para brigadistas, capacitadores, técnicos y administración de Protección Civil UCOL.">
+  <meta name="theme-color" content="#144a29">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/theme.js"></script>
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main>
+    <div class="auth-wrap">
+      <h1 style="font-size:1.7rem;text-align:center">Acceso al sistema</h1>
+      <p class="muted text-center">Para personal y brigadistas de Protección Civil.</p>
+      <div id="aviso"></div>
+
+      <div id="demo-box" class="notice notice-warn hidden">
+        <strong>Cuentas de demostración.</strong> Elige un perfil para explorar su panel:
+        <div class="actions" id="demo-roles" style="margin-top:.6rem"></div>
+        <p style="margin:.6rem 0 0;font-size:.85rem">No escribas contraseñas reales: en este modo todo se guarda en tu navegador.</p>
+      </div>
+
+      <form id="form-login" class="form-card form" novalidate>
+        <div class="field"><label for="email">Correo electrónico</label><input type="email" id="email" autocomplete="username" required></div>
+        <div class="field"><label for="password">Contraseña</label><input type="password" id="password" autocomplete="current-password" required></div>
+        <button type="submit" class="btn btn-primary btn-block" id="entrar">Entrar</button>
+        <p class="text-center" style="margin:0;font-size:.92rem">¿No tienes cuenta? <a href="#" id="ir-registro">Regístrate</a></p>
+      </form>
+
+      <form id="form-registro" class="form-card form hidden" novalidate>
+        <h2 style="font-size:1.25rem;margin:0">Crear cuenta</h2>
+        <div class="field"><label for="r-nombre">Nombre completo</label><input type="text" id="r-nombre" autocomplete="name" required></div>
+        <div class="field"><label for="r-email">Correo electrónico</label><input type="email" id="r-email" autocomplete="email" required></div>
+        <div class="field"><label for="r-password">Contraseña</label><input type="password" id="r-password" autocomplete="new-password" minlength="8" required><p class="hint">Mínimo 8 caracteres.</p></div>
+        <p class="muted" style="font-size:.88rem;margin:0">Las cuentas nuevas tienen acceso básico. Los permisos de brigadista, capacitador o técnico los asigna la administración.</p>
+        <button type="submit" class="btn btn-primary btn-block" id="registrar">Crear cuenta</button>
+        <p class="text-center" style="margin:0;font-size:.92rem">¿Ya tienes cuenta? <a href="#" id="ir-login">Inicia sesión</a></p>
+      </form>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/demo.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/boot.js"></script>
+  <script src="js/pages/login.js"></script>
+</body>
+</html>

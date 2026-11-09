@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Panel de capacitación | Protección Civil UCOL</title>
+  <meta name="description" content="Panel de capacitación de Protección Civil UCOL: cursos e inscripciones.">
+  <meta name="theme-color" content="#144a29">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/theme.js"></script>
+</head>
+<body>
+  <div id="site-header"></div>
+
+    <section class="page-title"><div class="container"><h1>Panel de capacitación</h1><p>Cursos programados e inscripciones por revisar.</p></div></section>
+  <main>
+    <div class="container panel">
+      <nav class="panel-nav" aria-label="Secciones del panel">
+        <button type="button" data-tab="resumen" aria-selected="true">Resumen</button>
+        <button type="button" data-tab="pendientes" aria-selected="false">Por aprobar</button>
+        <button type="button" data-tab="inscritos" aria-selected="false">Inscripciones</button>
+      </nav>
+      <div>
+        <section data-section="resumen">
+          <div class="panel-head"><h2>Resumen</h2></div>
+          <div class="grid grid-4" id="tiles"></div>
+          <h3 style="margin-top:2rem">Cursos</h3>
+          <div id="lista-cursos" class="grid grid-2"></div>
+        </section>
+        <section data-section="pendientes" class="hidden">
+          <div class="panel-head"><h2>Inscripciones por aprobar</h2></div>
+          <div id="lista-pendientes" class="stack"></div>
+        </section>
+        <section data-section="inscritos" class="hidden">
+          <div class="panel-head"><h2>Todas las inscripciones</h2>
+            <select id="filtro-curso" aria-label="Filtrar por curso" style="width:auto"><option value="">Todos los cursos</option></select></div>
+          <div class="table-wrap"><table>
+            <thead><tr><th>Nombre</th><th>Curso</th><th>Contacto</th><th>Fecha</th><th>Estatus</th></tr></thead>
+            <tbody id="tabla-inscritos"></tbody>
+          </table></div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/demo.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/boot.js"></script>
+  <script src="js/panel.js"></script>
+  <script src="js/pages/dash-capaci.js"></script>
+</body>
+</html>
