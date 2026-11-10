@@ -4,7 +4,7 @@ Sitio web y sistema de gestión para la Unidad de Protección Civil de la Univer
 
 Reúne en un solo lugar la información de la unidad y las tareas que antes se hacían por separado: la comunidad universitaria puede consultar novedades, reportar emergencias, inscribirse a cursos y solicitar su ingreso a una brigada, mientras que el personal cuenta con paneles internos para dar seguimiento a todo ello.
 
-**Sitio publicado:** 
+**Sitio publicado:** https://quinterojatziri.github.io/Proteccion-Civil-Ucol/
 
 ## Funcionalidades
 
